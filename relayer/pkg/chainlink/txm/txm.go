@@ -350,7 +350,7 @@ func (txm *starktxm) confirmLoop() {
 			allUnconfirmedTxs := txm.accountStore.GetAllUnconfirmed()
 			for accountAddressStr, unconfirmedTxs := range allUnconfirmedTxs {
 				accountAddress, err := new(felt.Felt).SetString(accountAddressStr)
-				// this should never occur because the acccount address string key was created from the account address felt.
+				// this should never occur because the account address string key was created from the account address felt.
 				if err != nil {
 					txm.lggr.Errorw("could not recreate account address felt", "accountAddress", accountAddressStr)
 					continue

@@ -10,7 +10,7 @@ The integration tests are using TOML as the configuration input. The logic and p
 
 By default, the tests will be running with the default config set in [default.toml](./testconfig/default.toml). This configuration is set to run on devnet with local docker.
 
-Fields in the default toml can be overriden by creating an `overrides.toml`file. Any values specified here take precedence and will be overwritten if they overlap with `default.toml`.
+Fields in the default toml can be overridden by creating an `overrides.toml`file. Any values specified here take precedence and will be overwritten if they overlap with `default.toml`.
 
 ##### Testnet runs
 In order to run the tests on Testnet, additional variables need to be specified in the TOML, these would also be pointed out if `network = "testnet"` is set. The additional variables are:

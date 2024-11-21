@@ -9,7 +9,7 @@ import (
 	gethrpc "github.com/ethereum/go-ethereum/rpc"
 )
 
-// type alias for readibility
+// type alias for readability
 type FinalizedBlock = starknetrpc.Block
 
 // used to create batch requests
@@ -17,7 +17,7 @@ type BatchBuilder interface {
 	RequestBlockByHash(h *felt.Felt) BatchBuilder
 	RequestBlockByNumber(id uint64) BatchBuilder
 	RequestChainID() BatchBuilder
-	// RequestLatestPendingBlock() (BatchBuilder)
+	// RequestLatestBlockHashAndNumber() (BatchBuilder)
 	RequestLatestBlockHashAndNumber() BatchBuilder
 	RequestEventsByFilter(f starknetrpc.EventsInput) BatchBuilder
 	// RequestTxReceiptByHash(h *felt.Felt) (BatchBuilder)
